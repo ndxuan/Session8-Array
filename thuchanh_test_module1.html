@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài toán Quản Lý Sinh Viên sử dụng Mảng trong JS</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+        #edit11 {
+        background-color: mediumblue;
+        color: white;
+        border: 2px solid black;
+        border-radius: 7px;
+        }
+
+        #edit21 {
+            background-color: mediumblue;
+            color: white;
+            border: 2px solid black;
+            border-radius: 7px;
+        }
+
+        #delete12 {
+            background-color: red;
+            color: white;
+            border: 2px solid black;
+            border-radius: 7px;}
+        #delete22 {
+            background-color: red;
+            color: white;
+            border: 2px solid black;
+            border-radius: 7px;}
+        #col {
+            color: blue;
+            border: 2px solid palevioletred;
+
+
+
+        }
+        #tr1 {
+            border-collapse: collapse;
+        }
+        #h3 {
+            text-align: center;
+            color: red;
+        }
+        #create {
+            background-color: green;
+            color: yellow;
+            border-radius: 5px;
+        }
+        #search {
+            background-color: darkgreen;
+            color: yellow;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<h3 id="h3"></h3>
+<form style="text-align: center" >
+
+        <input id="input_create" type="text" value="" size="50px"/>
+        <input id="create" type="button" value="Create" onclick="createStudent()"/><br>
+        <input id="input_search" type="text" value="" size="50px"/>
+        <input id="search"  type="button" value="Search" onclick="search()"/>
+
+</form>
+<table border="1" width="100%" style="text-align: center">
+    <tr id="tr1">
+        <td colspan="4" id="col"> STUDENT MANAGE</td>
+</tr>
+    <tr>
+        <th>STT</th>
+        <th>NAME</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Ngân</td>
+        <td> <input type="button" value="Edit" id="edit11"/> </td>
+        <td> <input type="button" value="Delete" id="delete12"/> </td>
+
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Mến</td>
+        <td> <input type="button" value="Edit" id="edit21" /> </td>
+        <td> <input type="button" value="Delete" id="delete22"/> </td>
+    </tr>
+</table>
+<script>
+
+    function createStudent() {
+        let input = document.getElementById('input_create').value;
+        let input= 0;
+    }
+
+        if (input = 0){
+
+        alert('The name is required! Please try again!');
+        }
+        else {
+        alert('Create Student Success!');
+    }
+
+
+</script>
+
+
+
+
+</body>
+</html>
