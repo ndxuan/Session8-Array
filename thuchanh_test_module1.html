@@ -42,7 +42,7 @@
         #tr1 {
             border-collapse: collapse;
         }
-        #h3 {
+        #p {
             text-align: center;
             color: red;
         }
@@ -59,12 +59,12 @@
     </style>
 </head>
 <body>
-<h3 id="h3"></h3>
+<p id="p"></p>
 <form style="text-align: center" >
 
-        <input id="input_create" type="text" value="" size="50px"/>
+        <input id="input_create" type="text" value="" size="50px" placeholder="The Name Student" style="margin-bottom: 2px"/>
         <input id="create" type="button" value="Create" onclick="createStudent()"/><br>
-        <input id="input_search" type="text" value="" size="50px"/>
+        <input id="input_search" type="text" value="" size="50px" placeholder="Search Student"/>
         <input id="search"  type="button" value="Search" onclick="search()"/>
 
 </form>
@@ -79,34 +79,10 @@
         <th>DELETE</th>
 
     </tr>
-    <tr>
-        <td>1</td>
-        <td>Ngân</td>
-        <td> <input type="button" value="Edit" id="edit11"/> </td>
-        <td> <input type="button" value="Delete" id="delete12"/> </td>
 
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Mến</td>
-        <td> <input type="button" value="Edit" id="edit21" /> </td>
-        <td> <input type="button" value="Delete" id="delete22"/> </td>
-    </tr>
 </table>
 <script>
 
-    function createStudent() {
-        let input = document.getElementById('input_create').value;
-        let input= 0;
-    }
-
-        if (input = 0){
-
-        alert('The name is required! Please try again!');
-        }
-        else {
-        alert('Create Student Success!');
-    }
 
 
 </script>

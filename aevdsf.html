@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    body {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+    }
+    #btnCreate{
+      background-color: #88ec88;
+      color: red;
+      border-radius: 8px;
+    }
+    #btnSearch{
+      background-color: #36f6f6;
+      border-radius: 8px;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<input type="text" id="inputCreate" placeholder="The Name Student...">
+<button id="btnCreate" onclick="createStudent()">Create</button>
+<br>
+<input type="text" id="inputSearch" placeholder="Search Student...">
+<button id="btnSearch">Search</button>
+
+<table border="1" id="table">
+  <tr style="border: 1px solid deeppink">
+    <th colspan="4" style="color: blue">STUDENT MANAGE</th>
+  </tr>
+  <tr>
+    <th>STT</th>
+    <th>NAME</th>
+    <th>EDIT</th>
+    <th>DELETE</th>
+  </tr>
+
+</table>
+
+<script>
+
+  let STT = 0;
+  let i = 1;
+  function createStudent() {
+    let inputName = document.getElementById('inputCreate').value;
+    if (inputName == '') {
+      alert('The name is required! Please try again!');
+    } else {
+      STT++;
+      i++
+      let row = document.getElementById('table').insertRow(i);
+      for (let j = 0; j < 4; j++) {
+        let column = row.insertCell(j);
+        if (j == 0) {
+          column.innerHTML = STT;
+        } else if (j == 1) {
+          column.innerHTML = inputName;
+        } else if (j == 2) {
+          column.innerHTML = '<button style="background-color: blue; color: white; border-radius: 8px" onclick="updateStudent()">Edit</button>';
+        } else {
+          column.innerHTML = '<button style="background-color: red; color: white; border-radius: 8px" onclick="deleteStudent()">Delete</button>';
+        }
+      }
+    }
+    alert('Create Student Success');
+  }
+
+  function updateStudent() {
+    prompt('Enter the name to edit ----> Ngan');
+  }
+
+  function deleteStudent() {
+    let deleteData = confirm('Are you sure delete? OK -> Delete|Cancel -> No ');
+    if (deleteData == false) {
+      alert("Just Don't delete it! ")
+    }
+  }
+
+</script>
+
+</body>
+</html>
